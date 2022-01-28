@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("modal");
+  console.log("ok");
 
   const openModal = document.getElementById("connexion");
 
   openModal.addEventListener("click", () => {
-    document.getElementById("connexion").classList.add("modal display");
+    document.getElementById("modal").classList.add("display");
   });
 
-  //   const closeModal = document.getElementsByClassName("fas fa-times");
-
-  //   closeModal.onclick = func() {
-  //     modal.style.display = "none";
-  //   };
+  const closeModal = document.getElementById("closeButton");
+  closeModal.addEventListener("click", () => {
+    document.getElementById("modal").classList.add("hidden");
+  });
 });

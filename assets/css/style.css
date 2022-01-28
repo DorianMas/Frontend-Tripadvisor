@@ -492,7 +492,7 @@ footer a:link {
   display: none;
 }
 .display {
-  display: inherit;
+  display: flex;
 }
 .modal {
   background-color: rgb(0, 0, 0, 0.8);
@@ -502,7 +502,7 @@ footer a:link {
   position: fixed;
   z-index: 2;
   top: 0;
-  display: none;
+  /* display: none; */
 }
 
 .container-modal {
@@ -532,7 +532,7 @@ footer a:link {
   align-items: center;
 }
 
-.container-modal i {
+.container-modal img {
   color: rgb(0, 0, 0, 0.5);
   font-size: 20px;
   position: absolute;
@@ -563,6 +563,10 @@ footer a:link {
 
 .container-modal input[type="submit"]:hover {
   background-color: rgb(52, 400, 161);
+  cursor: pointer;
+}
+
+.container-modal img:hover {
   cursor: pointer;
 }
 
