@@ -1,0 +1,740 @@
+/* Import des polices */
+
+@font-face {
+  font-family: "BWModelica-Regular";
+  src: url("../fonts/BwModelica-Regular.ttf");
+  src: url("..fonts/BWModelica-Regular.otf") format("otf"),
+    url("../fonts/BWModelica-Regular.eot") format("eot"),
+    url("../fonts/BWModelica-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "BWModelica-Bold";
+  src: url("../fonts/BWModelica-Bold.ttf");
+  src: url("../fonts/BWModelica-Bold.otf") format("otf"),
+    url("../fonts/BWModelica-Bold.eot") format("eot"),
+    url("../fonts/BWModelica-Bold.woff") format("woff"),
+    url("../fonts/BWModelica-Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "TripSans-Medium";
+  src: url("../fonts/TripSans-Medium.ttf");
+  src: url("../fonts/TripSans-Medium.eot") format("eot"),
+    url("../fonts/TripSans-Medium.woff") format("woff"),
+    url("../fonts/TripSans-Medium.svg") format("svg");
+}
+
+@font-face {
+  font-family: "TripSans-Regular";
+  src: url("../fonts/TripSans-Regular.ttf") format("ttf");
+  src: url("../fonts/TripSans-Regular.woff") format("woff"),
+    url("../fonts/TripSans-Regular.svg") format("svg");
+}
+
+/* Règles communes à la page */
+
+body {
+  font-family: "TripSans-Regular";
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 5px auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "TripSans-Medium", sans-serif;
+  font-size: 54px;
+  line-height: 1px;
+  font-weight: bold;
+  margin-top: 50px;
+  height: 40px;
+}
+
+h1 span {
+  color: #ff5d5d;
+}
+
+h2 {
+  font-family: "TripSans-Regular", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "TripSans-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Header */
+
+header {
+  font-family: "TripSans-Regular", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.logo-and-searchbar {
+  display: flex;
+  align-items: center;
+  flex: 3;
+}
+
+.logo-and-searchbar img:hover {
+  cursor: pointer;
+}
+
+header img {
+  width: 200px;
+  height: 100%;
+  margin-right: 28px;
+}
+
+/* Désactivation du header mobile */
+
+.header-mobile {
+  display: none;
+}
+
+/* Navigation */
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: "TripSans-Medium";
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  flex: 2;
+}
+
+.primary-nav div {
+  /* justify-content: center; */
+  margin-left: 15px;
+  align-items: center;
+  display: flex;
+}
+
+.primary-nav div i {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+.searchbar {
+  border: 2px solid rgb(206, 201, 201);
+  border-radius: 20px;
+  height: 80%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 2%;
+}
+
+form input {
+  border: hidden;
+  flex: 100%;
+}
+
+.primary-nav-button:hover {
+  background-color: rgba(128, 128, 128, 0.082);
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button {
+  font-family: "TripSans-Medium";
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: none;
+  width: 150px;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+button:hover {
+  background-color: rgb(58, 56, 56);
+}
+
+/* Menu */
+
+.menu {
+  display: flex;
+  font-family: "TripSans-Medium", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.menu div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: black solid 1px;
+  border-radius: 10px;
+  width: 159px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 20px;
+}
+
+.menu div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-tache:nth-child(6) {
+  display: none;
+}
+
+.menu-tache:nth-child(7) {
+  display: none;
+}
+
+/* Illustrations */
+
+.columns {
+  height: 400px;
+  display: flex;
+}
+
+.columns img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.column1 {
+  width: 100%;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+
+.column2 img {
+  height: 50%;
+}
+
+.column2 img:first-child {
+  margin-bottom: 3px;
+}
+
+/* Arborescence */
+
+.arborescence {
+  font-family: "TripSans-Regular", sans-serif;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 14px;
+}
+
+.arborescence .navigation a:link {
+  color: black;
+  text-decoration: none;
+}
+.arborescence .navigation a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.arborescence .navigation i {
+  color: black;
+  font-size: 8px;
+}
+
+.message {
+  color: rgb(51, 51, 51);
+}
+
+/* Description */
+
+#section-description {
+  display: flex;
+  justify-content: space-between;
+  /* object-position: 50% 50%; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#section-description .texte {
+  width: 50%;
+}
+
+.texte p {
+  font-family: "BWModelica-Regular";
+  font-size: 22px;
+  line-height: 25px;
+  color: black;
+}
+
+/* Bloc de création de voyage */
+
+.create-trip {
+  display: block;
+  flex-direction: row;
+  width: 400px;
+  background-color: #ff5d5d;
+  font-family: "TripSans-Regular", sans-serif;
+  font-size: 20px;
+  color: black;
+  padding-top: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.create-trip h3 {
+  font-family: "TripSans-Regular", sans-serif;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.create-trip p {
+  font-family: "TripSans-Regular", sans-serif;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.button-creation-voyage {
+  background-color: black;
+  color: white;
+  margin: 10px 0;
+  border-radius: 20px;
+  text-align: center;
+  padding: 15px 15px;
+  width: 40%;
+  font-size: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.button-creation-voyage:hover {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+.block-create-trip img {
+  width: 400px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Section activités */
+
+.theme-activite {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.description-theme-activite {
+  flex: 1;
+}
+
+.description-theme-activite p {
+  font-family: "BWModelica-Regular";
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.description-theme-activite a:link {
+  color: rgb(51, 51, 51);
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.caroussel-activites {
+  flex: 3;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 20px;
+}
+
+.caroussel-activites::-webkit-scrollbar {
+  display: none;
+}
+
+.activite {
+  /* width: 30%; */
+  flex: calc(33.3333% - 13px);
+  flex-shrink: 0;
+}
+
+.activite-illustration {
+  display: block;
+  flex-direction: column;
+  position: relative;
+}
+
+.activite-illustration img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bouton-like {
+  background-color: white;
+  border-radius: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 20px;
+}
+
+.tripadvisor-certification {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.tripadvisor-certification-logo {
+  background-color: #34e0a1;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.tripadvisor-certification-logo img {
+  width: 80%;
+}
+
+.tripadvisor-certification-year {
+  background-color: #34e0a1;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  width: 50%;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.caroussel-activites h4 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: "TripSans-Medium";
+}
+
+.rates img {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.rates {
+  display: flex;
+  align-items: center;
+}
+
+.rates span {
+  margin: 10px 0;
+}
+
+/* Footer */
+
+footer {
+  background-color: #faf1ec;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+footer a:link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Formulaire de contact */
+.hidden {
+  display: none;
+}
+.display {
+  display: inherit;
+}
+.modal {
+  background-color: rgb(0, 0, 0, 0.8);
+  margin: auto;
+  height: 100vw;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  display: none;
+}
+
+.container-modal {
+  margin: 10% 35%;
+  flex-direction: row;
+}
+
+.container-modal div {
+  background-color: white;
+  border-radius: 20px;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.container-modal p {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.container-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-modal i {
+  color: rgb(0, 0, 0, 0.5);
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.container-modal textarea,
+.container-modal input {
+  font-family: "TripSans-Medium";
+  width: 60%;
+  margin: 10px 0;
+  outline: none;
+  border: black 2px solid;
+  padding: 16px 10px;
+  font-size: 16px;
+}
+
+.container-modal input[type="submit"] {
+  background-color: rgb(4, 170, 108);
+  color: white;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+}
+
+.container-modal input[type="submit"]:hover {
+  background-color: rgb(52, 400, 161);
+  cursor: pointer;
+}
+
+/* CSS Responsive */
+
+@media (max-width: 1184px) {
+  .container {
+    margin: 20px;
+  }
+
+  .header-mobile {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu-tache {
+    flex: calc(22% - 4%);
+  }
+
+  .menu-tache:nth-child(6) {
+    display: flex;
+  }
+  .menu-tache:nth-child(7) {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .primary-nav div span {
+    display: none;
+  }
+
+  .header-mobile {
+    display: none;
+  }
+
+  .columns {
+    height: 300px;
+  }
+
+  .block-create-trip {
+    display: none;
+  }
+
+  .texte {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 0;
+  }
+
+  header {
+    display: none;
+  }
+
+  .header-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 20px;
+    font-size: 20px;
+  }
+  .header-mobile img {
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  /* .menu {
+    display: flex;
+    font-family: "TripSans-Medium", sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 15px;
+  } */
+
+  .menu {
+    /* display: flex; */
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 10px;
+    flex-shrink: 1;
+    margin-left: 20px;
+    margin-top: 2px;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu div {
+    /* width: 159px;
+    height: 50px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* font-size: 16px; */
+    flex-shrink: 0;
+    min-width: fit-content;
+    align-items: center;
+    height: 30px;
+    flex-wrap: nowrap;
+  }
+  .menu div span {
+    margin-right: 5px;
+  }
+
+  .column2 {
+    display: none;
+  }
+
+  .arborescence {
+    display: none;
+  }
+
+  h2 {
+    font-family: "TripSans-Medium", sans-serif;
+    font-size: 28px;
+    margin: 0 20px;
+  }
+
+  .texte p {
+    font-size: 18px;
+    line-height: normal;
+    margin: 10px 20px;
+  }
+
+  .theme-activite {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    flex: 70%;
+  }
+
+  .description-theme-activite {
+    margin-bottom: 20px;
+  }
+
+  .caroussel-activites {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 10px;
+  }
+
+  .activite {
+    flex: 70%;
+    flex-shrink: 0;
+  }
+
+  .activite-illustration {
+    height: 400px;
+  }
+
+  .activite-illustration img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

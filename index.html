@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/bb54014cd5.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/assets/js/vanilla.js"></script>
+
+    <title>Trip Advisor</title>
+  </head>
+  <body>
+
+     <!-- Header -->
+    <header class="container">
+      <div class="logo-and-searchbar">
+        <img src="assets\img\logo.svg" alt="logo" />
+        <form class="searchbar" action="/Search">
+          <i class="fas fa-search"></i>
+          <input type="search" value="">
+        </form>
+      </div>
+
+      <nav class="primary-nav">
+        <div class="primary-nav-button">
+          <i class="fas fa-pen"></i>
+          <span>Avis</span>
+        </div>
+        <div class="primary-nav-button">
+          <i class="far fa-heart"></i>
+          <span>Voyages</span>
+        </div>
+        <div class="primary-nav-button">
+          <i class="far fa-bell"></i>
+          <span>Alertes</span>
+        </div>
+        <button id="connexion"><span>Connectez-vous</span></button>
+      <nav/>
+    </header>
+
+    <!-- Header version mobile  -->
+    <div class="header-mobile">
+      <i class="fas fa-bars"></i>
+      <img src="assets\img\logo.svg" alt="logo" />
+      <i class="fas fa-search"></i>
+    </div>
+
+    <main class="container">
+      <!-- Menu et illustrations -->
+        <section id="menu-et-illustration">
+      <h1><span>Explorez </span>Marseille</h1>
+      <nav class="menu">
+        <div class="menu-tache">
+          <span>Hôtels</span>
+          <i class="fas fa-bed"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Location de vacances</span>
+          <i class="fas fa-key"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Activités</span>
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Restaurants</span>
+          <i class="fas fa-utensils"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Forums de voyage</span>
+          <i class="far fa-comment-alt"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Vols</span>
+          <i class="fas fa-plane"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Croisières</span>
+          <i class="fas fa-ship"></i>
+        </div>
+        <div class="menu-tache">
+          <span>Plus</span>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </nav>
+      <div class="columns">
+        <div class="column1">
+          <img src="assets/img/marseille1.jpg" alt="Marseille" />
+        </div>
+        <div class="column2">
+          <img
+            src="assets\img\parc-national-des-calanques.jpg"
+            alt="calanques"
+          />
+          <img src="assets\img\vue-d-ensemble-du-mucem.jpg" alt="mucem" />
+        </div>
+      </div>
+      <div class="arborescence">
+        <div class="navigation">
+          <a href="#">Europe</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="#">France</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="#">Provence-Alpes-Côte d'Azur</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="#">Bouches-du-Rhône</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="#">Marseille</a>
+        </div>
+        <div class="message">
+          <span>Visiter : Marseille</span>
+        </div>
+      </div>
+
+     <!-- Description de la destination -->
+    </section>
+      <section id="section-description">
+        <div class="texte">
+          <h2>Marseille : informations</h2>
+          <p>
+            Les voyageurs visitent la ville portuaire de Marseille, la troisième
+            ville de France, pour son mélange de style et de tradition. La baie,
+            entourée par le fort Saint-Nicolas et le fort Saint-Jean abrite le
+            château d'If, connu grâce au Comte de Monte-Cristo. Dominées par la
+            basilique Notre-Dame-de-la-Garde, les zones piétonnes et
+            commerçantes de la ville (y compris le quartier franco-africain) se
+            mêlent aux sites historiques. Les voyageurs en quête de
+            divertissement peuvent aller au OK Corral, parc d'attractions sur le
+            thème des cowboys.
+          </p>
+        </div>
+        <div class="block-create-trip">
+          <div class="create-trip">
+            <h3>Marseille : commencez à organiser !</h3>
+            <p>
+              Créez un voyage pour enregistrer et organiser toutes vos idées et
+              les visualiser sur une carte.
+            </p>
+            <div class="button-creation-voyage"> <span>Créez un voyage</span> </div>
+          </div>
+          <img src="assets\img\map.png" alt="map" />
+        </div>
+      </section>
+      
+            <!-- Activités de la destination -->
+      <section id="section-activites">
+          <h2>Marseille : les immanquables</h2>
+          <div class="thématiques-activites">
+          <div class="theme-activite">
+              <div class="description-theme-activite">
+                  <h3>Se divertir</h3>
+                  <p>Des lieux à voir, des rues à explorer et des expériences emblématiques.
+                </p>
+                <a href="#">Tout afficher</a>
+            </div>
+
+            <div class="caroussel-activites">
+
+                <div class="activite">
+                    <div class="activite-illustration">
+                    <img src="assets\img\dans-toute-sa-splendeur.jpg" alt="basilique Notre-Dame-de-la-Garde">
+                    <div class="bouton-like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="tripadvisor-certification">
+                        <div class="tripadvisor-certification-logo">
+                          <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                        </div>
+                        <div class="tripadvisor-certification-year"><span>2021</span> 
+                        </div>
+                    </div>
+                    </div>
+                    <h4>Basique Notre-Dame-de-la-Garde</h4>
+                 <div class="rates">
+                    <img src="assets\img\images.png" alt="rates">
+                    <span>13 291</span>
+                </div>
+                <p>Sites religieux</p>
+                 </div>
+
+                 <div class="activite">
+                    <div class="activite-illustration">
+                     <img src="assets\img\cassis.jpg" alt="Calanques">
+                    <div class="bouton-like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="tripadvisor-certification">
+                        <div class="tripadvisor-certification-logo">
+                          <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                        </div>
+                        <div class="tripadvisor-certification-year"><span>2021</span> 
+                        </div>
+                    </div>
+                    </div>
+                    <h4>Parc parc National des Calanques</h4>
+                    <div class="rates">
+                      <img src="assets\img\images.png" alt="rates">
+                      <span>3 975</span>
+                    </div>
+                    <p>Parc nationaux, Monuments & Points d'intérêt</p>
+                 </div>
+
+
+                 <div class="activite">
+                    <div class="activite-illustration">
+                        <img src="assets\img\photo1jpg.jpg" alt="Chateau d'If">
+                    <div class="bouton-like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="tripadvisor-certification">
+                        <div class="tripadvisor-certification-logo">
+                          <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                        </div>
+                        <div class="tripadvisor-certification-year"><span>2021</span> 
+                        </div>
+                    </div>
+                    </div>
+                    <h4>Chateau d'If</h4>
+                    <div class="rates">
+                      <img src="assets\img\images.png" alt="rates">
+                      <span>1 742</span>
+                    </div>
+                      <p>Sites historiques, Iles</p>
+                     </div>
+
+
+                 <div class="activite">
+                    <div class="activite-illustration">
+                     <img src="assets\img\vue-d-ensemble-du-mucem (2).jpg" alt="Mucem">
+                    <div class="bouton-like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="tripadvisor-certification">
+                        <div class="tripadvisor-certification-logo">
+                          <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                        </div>
+                        <div class="tripadvisor-certification-year"><span>2021</span> 
+                        </div>
+                    </div>
+                    </div>
+                    <h4>Mucem</h4>
+                    <div class="rates">
+                      <img src="assets\img\images.png" alt="rates">
+                      <span>6 815</span>
+                    </div>
+                    <p>Musées d'art, Musées d'histoire</p>
+                 </div>
+
+           </div>
+
+        </div>
+    </div>
+
+
+    <div class="thématiques-activites">
+        <div class="theme-activite">
+            <div class="description-theme-activite">
+                <h3>Se reposer</h3>
+                <p>Un mélange de charme, de modernité et de valeurs sûres.
+
+              </p>
+              <a href="#">Tout afficher</a>
+          </div>
+
+          <div class="caroussel-activites">
+
+              <div class="activite">
+                  <div class="activite-illustration">
+                  <img src="assets\img\hotel-la-residence-du.jpg" alt="Hôtels">
+                  <div class="bouton-like">
+                      <i class="far fa-heart"></i>
+                  </div>
+                  <div class="tripadvisor-certification">
+                      <div class="tripadvisor-certification-logo">
+                        <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                      </div>
+                      <div class="tripadvisor-certification-year"><span>2021</span> 
+                      </div>
+                  </div>
+                  </div>
+                  <h4>Hôtel La Residence du Vieux Port</h4>
+               <div class="rates">
+                  <img src="assets\img\images.png" alt="rates">
+                  <span>13 291</span>
+              </div>
+              <p>Hôtels</p>
+               </div>
+
+               <div class="activite">
+                  <div class="activite-illustration">
+                   <img src="assets\img\spa-by-alex.jpg" alt="Hôtels, Spas">
+                  <div class="bouton-like">
+                      <i class="far fa-heart"></i>
+                  </div>
+                  <div class="tripadvisor-certification">
+                      <div class="tripadvisor-certification-logo">
+                        <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                      </div>
+                      <div class="tripadvisor-certification-year"><span>2021</span> 
+                      </div>
+                  </div>
+                  </div>
+                  <h4>Alex Hotel & Spa</h4>
+                  <div class="rates">
+                    <img src="assets\img\images.png" alt="rates">
+                    <span>3 975</span>
+                  </div>
+                  <p>Hôtels, Spas</p>
+               </div>
+
+
+               <div class="activite">
+                  <div class="activite-illustration">
+                      <img src="assets\img\patio.jpg" alt="Chateau d'If">
+                  <div class="bouton-like">
+                      <i class="far fa-heart"></i>
+                  </div>
+                  <div class="tripadvisor-certification">
+                      <div class="tripadvisor-certification-logo">
+                        <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                      </div>
+                      <div class="tripadvisor-certification-year"><span>2021</span> 
+                      </div>
+                  </div>
+                  </div>
+                  <h4>Le Ryad Boutique Hôtel</h4>
+                  <div class="rates">
+                    <img src="assets\img\images.png" alt="rates">
+                    <span>1 742</span>
+                  </div>
+                    <p>Hôtels, Ryad</p>
+                   </div>
+
+
+               <div class="activite">
+                  <div class="activite-illustration">
+                   <img src="assets\img\vue-d-ensemble-du-mucem (2).jpg" alt="Mucem">
+                  <div class="bouton-like">
+                      <i class="far fa-heart"></i>
+                  </div>
+                  <div class="tripadvisor-certification">
+                      <div class="tripadvisor-certification-logo">
+                        <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="tripadvisor-certification">  
+                      </div>
+                      <div class="tripadvisor-certification-year"><span>2021</span> 
+                      </div>
+                  </div>
+                  </div>
+                  <h4>Mucem</h4>
+                  <div class="rates">
+                    <img src="assets\img\images.png" alt="rates">
+                    <span>6 815</span>
+                  </div>
+                  <p>Musées d'art, Musées d'histoire</p>
+               </div>
+
+         </div>
+
+      </div>
+  </div>
+        </section>
+    </main>
+
+          <!-- Footer -->
+    <footer>
+        <img src="assets\img\Tripadvisor_logoset_solid_green.svg" alt="logo-tripadvisor">
+        <p>"Made at <a href="https://www.lereacteur.io/">Le Reacteur</a> by <a href="https://www.linkedin.com/in/dorian-masquelier-5b5a498a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSMxF%2FXoQTxWr4d9WCseh4g%3D%3D">Dorian Masquelier</a> - 2022"</p>
+    </footer>
+
+        <!-- Formulaire de contact -->
+
+    <div class="modal hidden">
+      <div class="container-modal">
+        <div>
+          <i class="fas fa-times"></i>
+          <p>Formulaire de contact</p>
+       <form id="contact-form">
+        <input type="text" name="firstname" id="firstname" placeholder="Prénom" autocomplete="off">
+        <input type="text" name="lastname" id="lastname" placeholder="Nom" autocomplete="off">
+        <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
+        <textarea name="description" id="description" cols="50" rows="5" placeholder="Écrivez ici votre message..."></textarea>
+        <input type="submit" value="Envoyer le formulaire">
+      </form>
+    </div>
+    </div>
+    </div>
+
+
+
+  </body>
+</html>
