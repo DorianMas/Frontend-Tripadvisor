@@ -185,16 +185,16 @@ button:hover {
 
 .menu div {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   border: black solid 1px;
   border-radius: 10px;
   width: 159px;
   height: 50px;
-  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   line-height: 20px;
+  flex-grow: 1;
 }
 
 .menu div:hover {
@@ -587,7 +587,7 @@ footer a:link {
   }
 
   .menu-tache {
-    flex: calc(22% - 4%);
+    flex: calc(25% - 20px);
   }
 
   .menu-tache:nth-child(6) {
