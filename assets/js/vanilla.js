@@ -27,8 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
         email: document.querySelector("#email").value,
         description: document.querySelector("#description").value,
       };
-      /* console.log(data); */
-      const response = await axios.post("/form", data);
-      console.log(response);
+      console.log(data);
+
+      try {
+        const response = await axios.post(
+          "https://formulaire-backend-test--trip.herokuapp.com/",
+          data
+        );
+        console.log(response.data);
+      } catch (error) {
+        alert("Le formulaire n'a pas pu être envoyé !");
+      }
     });
 });
