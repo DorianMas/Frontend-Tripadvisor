@@ -30,10 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(data);
 
       try {
-        const response = await axios.post(
-          "https://formulaire-backend-test--trip.herokuapp.com/",
-          data
-        );
+        // const response = await axios.post(
+        //   "https://formulaire-backend-test--trip.herokuapp.com/",
+        //   data
+        // );
+        const response = await axios.post("http://localhost:4000/form", data);
         console.log(response.data);
       } catch (error) {
         alert("Le formulaire n'a pas pu être envoyé !");
