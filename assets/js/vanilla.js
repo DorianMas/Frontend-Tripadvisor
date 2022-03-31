@@ -36,9 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // );
         const response = await axios.post(
           // "https://formulaire-backend-test--trip.herokuapp.com/"
+          // "https://tripadvisor-backend-test.herokuapp.com/form",
+          // "http://localhost:4000/form",
           "https://tripadvisor-backend-test.herokuapp.com/form",
           data
         );
+        alert("Le formulaire a bien été envoyé !");
         console.log(response.data);
       } catch (error) {
         alert("Le formulaire n'a pas pu être envoyé !");
