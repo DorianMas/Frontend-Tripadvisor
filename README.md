@@ -21,12 +21,14 @@ Here is the frontend repo of the Fullstack Tripadvisor exercise
 
 **Client:** VanillaJS, HTML, CSS, Axios
 
-**Server:** Express, MailGun 
+**Server:** Express, MailGun, Heroku 
 
 
 ## Demo
 
 Hosted on Netlify ➡️ https://tripadvisor-dm.netlify.app
+
+API hosted on Heroku
 
 
 
